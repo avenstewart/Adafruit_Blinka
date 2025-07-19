@@ -40,6 +40,8 @@ elif (
     from adafruit_blinka.microcontroller.rp2040_u2if import neopixel as _neopixel
 elif "sphinx" in sys.modules:
     pass
+elif detector.board.any_orange_pi:
+    from adafruit_blinka.microcontroller.rockchip.rk3588s import neopixel as _neopixel
 else:
     raise NotImplementedError("Board not supported")
 
